@@ -33,7 +33,7 @@
     margin-block-end: 5px;
 }
 
-body {
+html {
     background-color: var(--black10);
     color: var(--white230);
     font-family: Telegrama;
@@ -64,7 +64,7 @@ textarea {
 }
 
 @media screen and (prefers-color-scheme: light) {
-    body {
+    html {
         background-color: var(--white230);
         color: var(--black10);
         font-family: Telegrama;
