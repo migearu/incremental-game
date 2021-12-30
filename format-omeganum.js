@@ -98,8 +98,8 @@ function format(num, precision=2, small=false) {
     if (num.isInfinite()) return "Infinity"
     //if (num.lt("0.0001")) { return format(num.rec(), precision) + "⁻¹" }
     //else if (num.lt(1)) return regularFormat(num, precision + (small ? 2 : 0))
-    else if (num.lt(1000)) return regularFormat(num, 0)
-    else if (num.lt(1e8)) return commaFormat(num)
+    //else if (num.lt(1000)) return regularFormat(num, 0)
+    else if (num.lt(1e9)) return commaFormat(num)
     else if (num.lt("10^^5")) { // 1e9 ~ 1F5
         let rep = (array[1]||0)-1
         if (array[0] >= 1e9) {

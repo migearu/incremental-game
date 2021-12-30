@@ -7,6 +7,7 @@
     --black10: rgb(10, 10, 10);
     --black20: rgb(20, 20, 20);
     --white230: rgb(230, 230, 230);
+    --activegreen: #8cff8c;
 }
 
 .CT {
@@ -38,18 +39,10 @@ body {
     font-family: Telegrama;
     size: 100%;
 }
-@media screen and (prefers-color-scheme: light) {
-    body {
-        background-color: var(--white230);
-        color: var(--black10);
-        font-family: Telegrama;
-        size: 100%;
-    }
-}
 
 button {
     font-family: Telegrama;
-    border: 2px solid #d2bdff;
+    border: 2px solid var(--activegreen);
     border-radius: 4px;
     position: relative;
     cursor: pointer;
@@ -58,4 +51,36 @@ button {
     color: var(--white230);
     padding: 10px;
     width: 200px;
+}
+
+textarea {
+    resize: none;
+    font-family: Telegrama;
+    background-color: var(--black20);
+    color: var(--white230);
+    border-color: var(--white230);
+    border-radius: 5px;
+    text-align: center;
+}
+
+@media screen and (prefers-color-scheme: light) {
+    body {
+        background-color: var(--white230);
+        color: var(--black10);
+        font-family: Telegrama;
+        size: 100%;
+    }
+
+    button {
+        font-family: Telegrama;
+        border: 2px solid #000000;
+        border-radius: 4px;
+        position: relative;
+        cursor: pointer;
+        margin: 2px;
+        background-color: var(--white230);
+        color: var(--black20);
+        padding: 10px;
+        width: 200px;
+    }
 }

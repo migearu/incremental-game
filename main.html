@@ -7,8 +7,10 @@
         <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
         <script src="OmegaNum.js"></script>
         <script src="format-omeganum.js"></script>
-        <link rel="stylesheet" href="main.css">
+        <script src="lz-string.js"></script>
+        <script src="saveload.js"></script>
         <script src="main.js"></script>
+        <link rel="stylesheet" href="main.css">
         <script>
             var titles = ['1.79e308', 'Bugs 19% Loaded.', 'what', '']
             var title = titles[Math.floor(Math.random() * titles.length)] // pick random item
@@ -19,89 +21,97 @@
         <h1 class="CT fivemargin" id="TPObject">{time placeholder}</h1>
         <p class="CT fivemargin">Time Particles</p>
         <br>
-        <div class="CT" id="gen1to5">
-            <button onclick="BuyItem.TimeTiers.Tier1()">
-                <p class="nomargin">Time Generator T1</p>
-                <p class="nomargin">Powerhouse.</p>
-                <br>
-                <p class="nomargin" id="TT1Mult">×1</p>
-                <p class="nomargin" id="TT1Cost">Cost: 10</p>
-                <p class="nomargin" id="TT1Amnt">Amount: 0</p>
-            </button>
-            <button onclick="BuyItem.TimeTiers.Tier2()">
-                <p class="nomargin">Time Generator T2</p>
-                <p class="nomargin">This works?</p>
-                <br>
-                <p class="nomargin" id="TT2Mult">×1</p>
-                <p class="nomargin" id="TT2Cost">Cost: 1,000</p>
-                <p class="nomargin" id="TT2Amnt">Amount: 0</p>
-            </button>
-            <button onclick="BuyItem.TimeTiers.Tier3()">
-                <p class="nomargin">Time Generator T3</p>
-                <p class="nomargin">There are more.</p>
-                <br>
-                <p class="nomargin" id="TT3Mult">×1</p>
-                <p class="nomargin" id="TT3Cost">Cost: 1,000,000</p>
-                <p class="nomargin" id="TT3Amnt">Amount: 0</p>
-            </button>
-            <button onclick="BuyItem.TimeTiers.Tier4()">
-                <p class="nomargin">Time Generator T4</p>
-                <p class="nomargin">4th Generator</p>
-                <br>
-                <p class="nomargin" id="TT4Mult">×1</p>
-                <p class="nomargin" id="TT4Cost">Cost: 1e9</p>
-                <p class="nomargin" id="TT4Amnt">Amount: 0</p>
-            </button>
-            <button onclick="BuyItem.TimeTiers.Tier5()">
-                <p class="nomargin">Time Generator T5</p>
-                <p class="nomargin">1, 2, 3, 4, 5.</p>
-                <br>
-                <p class="nomargin" id="TT5Mult">×1</p>
-                <p class="nomargin" id="TT5Cost">Cost: 1e12</p>
-                <p class="nomargin" id="TT5Amnt">Amount: 0</p>
-            </button>
-        </div>
-        <div class="CT" id="gen5to10">
-            <button onclick="BuyItem.TimeTiers.Tier6()">
-                <p class="nomargin">Time Generator T6</p>
-                <p class="nomargin">Congrats, Tier 6.</p>
-                <br>
-                <p class="nomargin" id="TT6Mult">×1</p>
-                <p class="nomargin" id="TT6Cost">Cost: 1e15</p>
-                <p class="nomargin" id="TT6Amnt">Amount: 0</p>
-            </button>
-            <button onclick="BuyItem.TimeTiers.Tier7()">
-                <p class="nomargin">Time Generator T7</p>
-                <p class="nomargin">Lucky Number.</p>
-                <br>
-                <p class="nomargin" id="TT7Mult">×1</p>
-                <p class="nomargin" id="TT7Cost">Cost: 1e18</p>
-                <p class="nomargin" id="TT7Amnt">Amount: 0</p>
-            </button>
-            <button onclick="BuyItem.TimeTiers.Tier8()">
-                <p class="nomargin">Time Generator T8</p>
-                <p class="nomargin">101 105 103 104 116</p>
-                <br>
-                <p class="nomargin" id="TT8Mult">×1</p>
-                <p class="nomargin" id="TT8Cost">Cost: 1e21</p>
-                <p class="nomargin" id="TT8Amnt">Amount: 0</p>
-            </button>
-            <button onclick="BuyItem.TimeTiers.Tier9()">
-                <p class="nomargin">Time Generator T9</p>
-                <p class="nomargin">999999999</p>
-                <br>
-                <p class="nomargin" id="TT9Mult">×1</p>
-                <p class="nomargin" id="TT9Cost">Cost: 1e24</p>
-                <p class="nomargin" id="TT9Amnt">Amount: 0</p>
-            </button>
-            <button onclick="BuyItem.TimeTiers.Tier10()">
-                <p class="nomargin">Time Generator T10</p>
-                <p class="nomargin">Super Generator.</p>
-                <br>
-                <p class="nomargin" id="TT10Mult">×1</p>
-                <p class="nomargin" id="TT10Cost">Cost: 1e27</p>
-                <p class="nomargin" id="TT10Amnt">Amount: 0</p>
-            </button>
+        <div id="main">
+            <div>
+                <div class="CT" id="gen1to5">
+                    <button onclick="BuyItem.TimeTiers.Tier1()">
+                        <p class="nomargin">Time Generator T1</p>
+                        <p class="nomargin">Powerhouse.</p>
+                        <br></br>
+                        <p class="nomargin" id="TT1Mult">×1</p>
+                        <p class="nomargin" id="TT1Cost">Cost: 10</p>
+                        <p class="nomargin" id="TT1Amnt">Amount: 0</p>
+                    </button>
+                    <button onclick="BuyItem.TimeTiers.Tier2()">
+                        <p class="nomargin">Time Generator T2</p>
+                        <p class="nomargin">This works?</p>
+                        <br></br>
+                        <p class="nomargin" id="TT2Mult">×1</p>
+                        <p class="nomargin" id="TT2Cost">Cost: 1,000</p>
+                        <p class="nomargin" id="TT2Amnt">Amount: 0</p>
+                    </button>
+                    <button onclick="BuyItem.TimeTiers.Tier3()">
+                        <p class="nomargin">Time Generator T3</p>
+                        <p class="nomargin">There are more.</p>
+                        <br></br>
+                        <p class="nomargin" id="TT3Mult">×1</p>
+                        <p class="nomargin" id="TT3Cost">Cost: 1,000,000</p>
+                        <p class="nomargin" id="TT3Amnt">Amount: 0</p>
+                    </button>
+                    <button onclick="BuyItem.TimeTiers.Tier4()">
+                        <p class="nomargin">Time Generator T4</p>
+                        <p class="nomargin">4th Generator</p>
+                        <br></br>
+                        <p class="nomargin" id="TT4Mult">×1</p>
+                        <p class="nomargin" id="TT4Cost">Cost: 1e9</p>
+                        <p class="nomargin" id="TT4Amnt">Amount: 0</p>
+                    </button>
+                    <button onclick="BuyItem.TimeTiers.Tier5()">
+                        <p class="nomargin">Time Generator T5</p>
+                        <p class="nomargin">1, 2, 3, 4, 5.</p>
+                        <br></br>
+                        <p class="nomargin" id="TT5Mult">×1</p>
+                        <p class="nomargin" id="TT5Cost">Cost: 1e12</p>
+                        <p class="nomargin" id="TT5Amnt">Amount: 0</p>
+                    </button>
+                </div>
+                <div class="CT" id="gen5to10">
+                    <button onclick="BuyItem.TimeTiers.Tier6()">
+                        <p class="nomargin">Time Generator T6</p>
+                        <p class="nomargin">Congrats, Tier 6.</p>
+                        <br></br>
+                        <p class="nomargin" id="TT6Mult">×1</p>
+                        <p class="nomargin" id="TT6Cost">Cost: 1e15</p>
+                        <p class="nomargin" id="TT6Amnt">Amount: 0</p>
+                    </button>
+                    <button onclick="BuyItem.TimeTiers.Tier7()">
+                        <p class="nomargin">Time Generator T7</p>
+                        <p class="nomargin">Lucky Number.</p>
+                        <br></br>
+                        <p class="nomargin" id="TT7Mult">×1</p>
+                        <p class="nomargin" id="TT7Cost">Cost: 1e18</p>
+                        <p class="nomargin" id="TT7Amnt">Amount: 0</p>
+                    </button>
+                    <button onclick="BuyItem.TimeTiers.Tier8()">
+                        <p class="nomargin">Time Generator T8</p>
+                        <p class="nomargin">101 105 103 104 116</p>
+                        <br></br>
+                        <p class="nomargin" id="TT8Mult">×1</p>
+                        <p class="nomargin" id="TT8Cost">Cost: 1e21</p>
+                        <p class="nomargin" id="TT8Amnt">Amount: 0</p>
+                    </button>
+                    <button onclick="BuyItem.TimeTiers.Tier9()">
+                        <p class="nomargin">Time Generator T9</p>
+                        <p class="nomargin">999999999</p>
+                        <br></br>
+                        <p class="nomargin" id="TT9Mult">×1</p>
+                        <p class="nomargin" id="TT9Cost">Cost: 1e24</p>
+                        <p class="nomargin" id="TT9Amnt">Amount: 0</p>
+                    </button>
+                    <button onclick="BuyItem.TimeTiers.Tier10()">
+                        <p class="nomargin">Time Generator T10</p>
+                        <p class="nomargin">Super Generator.</p>
+                        <br></br>
+                        <p class="nomargin" id="TT10Mult">×1</p>
+                        <p class="nomargin" id="TT10Cost">Cost: 1e27</p>
+                        <p class="nomargin" id="TT10Amnt">Amount: 0</p>
+                    </button>
+                </div>
+                <div class="CT">
+                    <textarea id="buyAmount" onkeypress="TestInvalidNum()">
+                    </textarea>
+                </div>
+            </div>
         </div>
     </body>
 </html>
