@@ -7,7 +7,7 @@ Buy Amount not
 # Ideas and Calculations
 ## Prestige Mechanics
 I already have the first one down, probably gonna be called Time Condensation, currency would be Time Crystals<br>
-Time Crystal Gain: ![image](https://user-images.githubusercontent.com/75057913/147837275-39a0a7cb-3512-446f-b8a1-07fa46c248bf.png), where x is equal to Time Particles
+Time Crystal Gain: ![image](https://user-images.githubusercontent.com/75057913/147837294-beed345e-28de-416c-a327-c8afaac6b9c5.png), where x is equal to Time Particles
 # Update 1
 For the current moment, to save and load, call WriteToStorage(gameData, "chronostasis-save"), and ReadFromStorage("chronostasis-save").<br>
 Why? Because I am too lazy to fix that right now, however it will be fixed in the next update.
