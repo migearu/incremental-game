@@ -3,14 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>plchld</title>
-        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-        <script src="OmegaNum.js"></script>
-        <script src="format-omeganum.js"></script>
-        <script src="lz-string.js"></script>
-        <script src="saveload.js"></script>
-        <script src="main.js"></script>
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="main/main.css">
         <script>
             var titles = ['1.79e308', 'Bugs 19% Loaded.', 'what', '']
             var title = titles[Math.floor(Math.random() * titles.length)] // pick random item
@@ -20,10 +13,18 @@
     <body>
         <h1 class="CT fivemargin" id="TPObject">{time placeholder}</h1>
         <p class="CT fivemargin">Time Particles</p>
+        <div class="CT">
+            <button onclick="MenuSwitch.Menu()" class="flexbutton">
+                <p class="nomargin">Menu</p>
+            </button>
+            <button onclick="MenuSwitch.Time()" class="flexbutton">
+                <p class="nomargin">Time</p>
+            </button>
+        </div>
         <br>
         <div id="main">
             <div>
-                <div class="CT" id="gen1to5">
+            <!--<div class="CT" id="gen1to5">
                     <button onclick="BuyItem.TimeTiers.Tier1()">
                         <p class="nomargin">Time Generator T1</p>
                         <p class="nomargin">Powerhouse.</p>
@@ -110,8 +111,44 @@
                 <div class="CT">
                     <textarea id="buyAmount" onkeypress="TestInvalidNum()">
                     </textarea>
+                </div>-->
+                <div class="CT">
+                    <h1 class="fivemargin">
+                        Main Menu
+                    </h1>
+                </div>
+                <div class="CT">
+                    <button onclick="Import()">
+                        <p class="nomargin">Import</p>
+                    </button>
+                    <button onclick="Export()">
+                        <p class="nomargin">Export</p>
+                    </button>
+                </div>
+                <div class="CT">
+                    <textarea id="writeTo" defaultValue="" rows=5>
+                    </textarea>
+                    <textarea readonly id="readFrom" defaultValue="" rows=5>
+                    </textarea>
+                </div>
+                <div class="CT">
+                    <button onclick="WriteToStorage(gameData, 'chronostasis-save')">
+                        <p class="nomargin">Save</p>
+                    </button>
+                    <button onclick="ReadFromStorage('chronostasis-save')">
+                        <p class="nomargin">Load</p>
+                    </button>
                 </div>
             </div>
         </div>
     </body>
+    <script type="text/javascript" src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script type="text/javascript" src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script type="text/javascript" src="number-libraries/OmegaNum.js"></script>
+    <script type="text/javascript" src="number-libraries/format-omeganum.js"></script>
+    <script type="text/javascript" src="save-load/lz-string.js"></script>
+    <script type="text/javascript" src="save-load/saveload.js"></script>
+    <script type="text/javascript" src="main/main.js"></script>
+    <script type="text/javascript" src="react-elements/TimeTierElements.js"></script>
+    <script type="text/javascript" src="react-elements/MainMenuElements.js"></script>
 </html>

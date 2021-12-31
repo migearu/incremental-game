@@ -1,0 +1,90 @@
+@font-face {
+    font-family: Telegrama;
+    src: url(telegrama.otf);
+}
+
+:root {
+    --black10: rgb(10, 10, 10);
+    --black20: rgb(20, 20, 20);
+    --white230: rgb(230, 230, 230);
+    --activegreen: #8cff8c;
+}
+
+.CT {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ftp {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    line-height: 1em; /* a */
+    max-height: 2em; /* a x number of line to show (ex : 2 line)  */
+}
+
+.nomargin {
+    margin: 0px;
+}
+
+.fivemargin {
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+}
+
+html {
+    background-color: var(--black10);
+    color: var(--white230);
+    font-family: Telegrama;
+    size: 100%;
+}
+
+button {
+    font-family: Telegrama;
+    border: 2px solid var(--activegreen);
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    margin: 2px;
+    background-color: var(--black20);
+    color: var(--white230);
+    padding: 10px;
+    width: 200px;
+}
+
+.flexbutton {
+    width: auto;
+}
+
+textarea {
+    resize: none;
+    font-family: Telegrama;
+    background-color: var(--black20);
+    color: var(--white230);
+    border-color: var(--white230);
+    border-radius: 5px;
+    text-align: center;
+}
+
+@media screen and (prefers-color-scheme: light) {
+    html {
+        background-color: var(--white230);
+        color: var(--black10);
+        font-family: Telegrama;
+        size: 100%;
+    }
+
+    button {
+        font-family: Telegrama;
+        border: 2px solid #000000;
+        border-radius: 4px;
+        position: relative;
+        cursor: pointer;
+        margin: 2px;
+        background-color: var(--white230);
+        color: var(--black20);
+        padding: 10px;
+        width: 200px;
+    }
+}
