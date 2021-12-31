@@ -10,7 +10,7 @@ Why? Because I am too lazy to fix that right now, however it will be fixed in th
 # Update 2
 ## In-Game
 Included a tab switcher from the "Time" menu to the "Menu" menu, where you can find saving and loading, as well as import/export.<br>
-Made good use of that multiplier, current formula is ![image](https://user-images.githubusercontent.com/75057913/147837019-00aa689f-9892-4a5d-a484-83cd148b0d0d.png), where x is equal to the number of tier bought.<br>
+Made good use of that multiplier, current formula is ![image](https://user-images.githubusercontent.com/75057913/147837039-439b5cda-ba91-45b1-8bba-294d30a8bad3.png), where x is equal to the number of tier bought.<br>
 Made code more efficient, to run the game faster
 ## Extra
 Organized into folders.<br>
