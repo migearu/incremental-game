@@ -19,4 +19,5 @@ Made good use of that multiplier, current formula is ![image](https://user-image
 ## Extra
 Organized into folders.<br>
 Elements now grouped and rendered in separate scripts, to add code readability.
-
+## Bugs
+Multiplier caps at 1.79e308 (Infinity) because of operator errors, already fixed but change not rolled out yet
