@@ -6,7 +6,7 @@ Link: https://codermanez.github.io/incremental-game/main.html<br><br>
 ~~Buy Amount text field not excluding special characters.~~ Fixed with regex, taken from the OmegaNum.js library (41)
 # Ideas and Calculations
 ## Some things to note
-The formula used for price calculation is ![image](https://user-images.githubusercontent.com/75057913/147889080-5e2c992e-8b24-434a-87bd-c74ca4f02f1a.png).
+The formula used for price calculation is ![image](https://user-images.githubusercontent.com/75057913/147889111-d0267914-cfa7-427c-ab93-78ba5e7d45ee.png).
 ## Prestige Mechanics
 I already have the first one down, probably gonna be called Time Condensation, currency would be Time Crystals<br>
 Time Crystal Gain: ![image](https://user-images.githubusercontent.com/75057913/147837315-77d058ee-36c0-498b-8f9d-a8213d09af69.png), where x is equal to Time Particles<br>
