@@ -5,6 +5,8 @@ Link: https://codermanez.github.io/incremental-game/main.html<br><br>
 # Things I don't know how to fix
 ~~Buy Amount text field not excluding special characters.~~ Fixed with regex, taken from the OmegaNum.js library (41)
 # Ideas and Calculations
+## Some things to note
+The formula used for price calculation is ![image](https://user-images.githubusercontent.com/75057913/147889080-5e2c992e-8b24-434a-87bd-c74ca4f02f1a.png).
 ## Prestige Mechanics
 I already have the first one down, probably gonna be called Time Condensation, currency would be Time Crystals<br>
 Time Crystal Gain: ![image](https://user-images.githubusercontent.com/75057913/147837315-77d058ee-36c0-498b-8f9d-a8213d09af69.png), where x is equal to Time Particles<br>
@@ -21,3 +23,13 @@ Organized into folders.<br>
 Elements now grouped and rendered in separate scripts, to add code readability.
 ## Bugs
 Multiplier caps at 1.79e308 (Infinity) because of operator errors, already fixed but change not rolled out yet
+# Update 3
+## In-Game
+Autobuyers implemented, up to tier 10<br>
+Formula for Autobuyer interval is ![image](https://user-images.githubusercontent.com/75057913/147888930-5db39eff-8b23-4253-b19a-8481846d70ed.png), where x = the amount of upgrades.<br>
+Added a hover effect.<br>
+(note: I eventually plan to add a prestige layer, maybe in the next update or two)
+## Extra
+N/A
+## Bugs
+N/A
