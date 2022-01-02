@@ -1,17 +1,18 @@
-var TimeTier1ReactElement;
-var TimeTier2ReactElement;
-var TimeTier3ReactElement;
-var TimeTier4ReactElement;
-var TimeTier5ReactElement;
-var TimeTier6ReactElement;
-var TimeTier7ReactElement;
-var TimeTier8ReactElement;
-var TimeTier9ReactElement;
-var TimeTier10ReactElement;
+var TimeTier1BasicReactElement;
+var TimeTier2BasicReactElement;
+var TimeTier3BasicReactElement;
+var TimeTier4BasicReactElement;
+var TimeTier5BasicReactElement;
+var TimeTier6BasicReactElement;
+var TimeTier7BasicReactElement;
+var TimeTier8BasicReactElement;
+var TimeTier9BasicReactElement;
+var TimeTier10BasicReactElement;
 window.setInterval(function(){
     if (gameData.gameState === "TimeTierMenu")
     {
-        TimeTier1ReactElement = React.createElement("button", {
+        TimeTier1BasicReactElement = React.createElement("button", {
+            className: "hover",
             onClick: BuyItem.TimeTiers.Tier1
         }, React.createElement("p", {
             className: "nomargin"
@@ -26,13 +27,14 @@ window.setInterval(function(){
         }, "Cost: " + format(TT1C, 5)), React.createElement("p", {
             className: "nomargin",
             id: "TT1Amnt"
-        }, "Amount: " + format(gameData.TimeTiers.Effective.Tier1, 5)))
+        }, "Amount: " + format(gameData.TimeTiers.Effective.Tier1, 5)));
 
 
         /*----------------------------------------SEPARATOR----------------------------------------*/
 
 
-        TimeTier2ReactElement = React.createElement("button", {
+        TimeTier2BasicReactElement = React.createElement("button", {
+            className: "hover",
             onClick: BuyItem.TimeTiers.Tier2
         }, React.createElement("p", {
             className: "nomargin"
@@ -47,13 +49,14 @@ window.setInterval(function(){
         }, "Cost: " + format(TT2C, 5)), React.createElement("p", {
             className: "nomargin",
             id: "TT2Amnt"
-        }, "Amount: " + format(gameData.TimeTiers.Effective.Tier2, 5)))
+        }, "Amount: " + format(gameData.TimeTiers.Effective.Tier2, 5)));
 
 
         /*----------------------------------------SEPARATOR----------------------------------------*/
 
 
-        TimeTier3ReactElement = React.createElement("button", {
+        TimeTier3BasicReactElement = React.createElement("button", {
+            className: "hover",
             onClick: BuyItem.TimeTiers.Tier3
         }, React.createElement("p", {
             className: "nomargin"
@@ -68,13 +71,14 @@ window.setInterval(function(){
         }, "Cost: " + format(TT3C, 5)), React.createElement("p", {
             className: "nomargin",
             id: "TT3Amnt"
-        }, "Amount: " + format(gameData.TimeTiers.Effective.Tier3, 5)))
+        }, "Amount: " + format(gameData.TimeTiers.Effective.Tier3, 5)));
 
 
         /*----------------------------------------SEPARATOR----------------------------------------*/
 
 
-        TimeTier4ReactElement = React.createElement("button", {
+        TimeTier4BasicReactElement = React.createElement("button", {
+            className: "hover",
             onClick: BuyItem.TimeTiers.Tier4
         }, React.createElement("p", {
             className: "nomargin"
@@ -89,13 +93,14 @@ window.setInterval(function(){
         }, "Cost: " + format(TT4C, 5)), React.createElement("p", {
             className: "nomargin",
             id: "TT4Amnt"
-        }, "Amount: " + format(gameData.TimeTiers.Effective.Tier4, 5)))
+        }, "Amount: " + format(gameData.TimeTiers.Effective.Tier4, 5)));
 
 
         /*----------------------------------------SEPARATOR----------------------------------------*/
 
 
-        TimeTier5ReactElement = React.createElement("button", {
+        TimeTier5BasicReactElement = React.createElement("button", {
+            className: "hover",
             onClick: BuyItem.TimeTiers.Tier5
         }, React.createElement("p", {
             className: "nomargin"
@@ -110,13 +115,14 @@ window.setInterval(function(){
         }, "Cost: " + format(TT5C, 5)), React.createElement("p", {
             className: "nomargin",
             id: "TT5Amnt"
-        }, "Amount: " + format(gameData.TimeTiers.Effective.Tier5, 5)))
+        }, "Amount: " + format(gameData.TimeTiers.Effective.Tier5, 5)));
 
 
         /*----------------------------------------SEPARATOR----------------------------------------*/
 
 
-        TimeTier6ReactElement = React.createElement("button", {
+        TimeTier6BasicReactElement = React.createElement("button", {
+            className: "hover",
             onClick: BuyItem.TimeTiers.Tier6
         }, React.createElement("p", {
             className: "nomargin"
@@ -131,13 +137,14 @@ window.setInterval(function(){
         }, "Cost: " + format(TT6C, 5)), React.createElement("p", {
             className: "nomargin",
             id: "TT6Amnt"
-        }, "Amount: " + format(gameData.TimeTiers.Effective.Tier6, 5)))
+        }, "Amount: " + format(gameData.TimeTiers.Effective.Tier6, 5)));
 
 
         /*----------------------------------------SEPARATOR----------------------------------------*/
 
 
-        TimeTier7ReactElement = React.createElement("button", {
+        TimeTier7BasicReactElement = React.createElement("button", {
+            className: "hover",
             onClick: BuyItem.TimeTiers.Tier7
         }, React.createElement("p", {
             className: "nomargin"
@@ -152,13 +159,14 @@ window.setInterval(function(){
         }, "Cost: " + format(TT7C, 5)), React.createElement("p", {
             className: "nomargin",
             id: "TT7Amnt"
-        }, "Amount: " + format(gameData.TimeTiers.Effective.Tier7, 5)))
+        }, "Amount: " + format(gameData.TimeTiers.Effective.Tier7, 5)));
 
 
         /*----------------------------------------SEPARATOR----------------------------------------*/
 
 
-        TimeTier8ReactElement = React.createElement("button", {
+        TimeTier8BasicReactElement = React.createElement("button", {
+            className: "hover",
             onClick: BuyItem.TimeTiers.Tier8
         }, React.createElement("p", {
             className: "nomargin"
@@ -173,13 +181,14 @@ window.setInterval(function(){
         }, "Cost: " + format(TT8C, 5)), React.createElement("p", {
             className: "nomargin",
             id: "TT8Amnt"
-        }, "Amount: " + format(gameData.TimeTiers.Effective.Tier8, 5)))
+        }, "Amount: " + format(gameData.TimeTiers.Effective.Tier8, 5)));
 
 
         /*----------------------------------------SEPARATOR----------------------------------------*/
 
 
-        TimeTier9ReactElement = React.createElement("button", {
+        TimeTier9BasicReactElement = React.createElement("button", {
+            className: "hover",
             onClick: BuyItem.TimeTiers.Tier9
         }, React.createElement("p", {
             className: "nomargin"
@@ -194,13 +203,14 @@ window.setInterval(function(){
         }, "Cost: " + format(TT9C, 5)), React.createElement("p", {
             className: "nomargin",
             id: "TT9Amnt"
-        }, "Amount: " + format(gameData.TimeTiers.Effective.Tier9, 5)))
+        }, "Amount: " + format(gameData.TimeTiers.Effective.Tier9, 5)));
 
 
         /*----------------------------------------SEPARATOR----------------------------------------*/
 
 
-        TimeTier10ReactElement = React.createElement("button", {
+        TimeTier10BasicReactElement = React.createElement("button", {
+            className: "hover",
             onClick: BuyItem.TimeTiers.Tier10
         }, React.createElement("p", {
             className: "nomargin"
@@ -215,7 +225,7 @@ window.setInterval(function(){
         }, "Cost: " + format(TT10C, 5)), React.createElement("p", {
             className: "nomargin",
             id: "TT10Amnt"
-        }, "Amount: " + format(gameData.TimeTiers.Effective.Tier10, 5)))
+        }, "Amount: " + format(gameData.TimeTiers.Effective.Tier10, 5)));
         
 
         /*----------------------------------------SEPARATOR----------------------------------------*/
@@ -225,11 +235,11 @@ window.setInterval(function(){
         React.createElement("div", null, React.createElement("div", {
             className: "CT",
             id: "gen1to5"
-        }, TimeTier1ReactElement, TimeTier2ReactElement, TimeTier3ReactElement, TimeTier4ReactElement, TimeTier5ReactElement),
+        }, TimeTier1BasicReactElement, TimeTier2BasicReactElement, TimeTier3BasicReactElement, TimeTier4BasicReactElement, TimeTier5BasicReactElement),
         React.createElement("div", {
             className: "CT",
             id: "gen5to10"
-        }, TimeTier6ReactElement, TimeTier7ReactElement, TimeTier8ReactElement, TimeTier9ReactElement, TimeTier10ReactElement),
+        }, TimeTier6BasicReactElement, TimeTier7BasicReactElement, TimeTier8BasicReactElement, TimeTier9BasicReactElement, TimeTier10BasicReactElement),
         React.createElement("br", null),
         React.createElement("div", null, React.createElement("div", {
             className: "CT"

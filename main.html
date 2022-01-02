@@ -4,6 +4,11 @@
         <meta charset="utf-8">
         <title>plchld</title>
         <link rel="stylesheet" href="main/main.css">
+        <link rel="icon" href="extra-elements/favicon.ico" type="image/x-icon">
+        <script type="text/javascript" src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script type="text/javascript" src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script type="text/javascript" src="number-libraries/OmegaNum.js"></script>
+        <script type="text/javascript" src="number-libraries/format-omeganum.js"></script>
         <script>
             var titles = ['1.79e308', 'Bugs 19% Loaded.', 'what', '']
             var title = titles[Math.floor(Math.random() * titles.length)] // pick random item
@@ -14,11 +19,14 @@
         <h1 class="CT fivemargin" id="TPObject">{time placeholder}</h1>
         <p class="CT fivemargin">Time Particles</p>
         <div class="CT">
-            <button onclick="MenuSwitch.Menu()" class="flexbutton">
+            <button onclick="MenuSwitch.Menu()" class="flexbutton hover">
                 <p class="nomargin">Menu</p>
             </button>
-            <button onclick="MenuSwitch.Time()" class="flexbutton">
+            <button onclick="MenuSwitch.Time()" class="flexbutton hover">
                 <p class="nomargin">Time</p>
+            </button>
+            <button onclick="MenuSwitch.Autobuyer()" class="flexbutton hover">
+                <p class="nomargin">Autobuyers</p>
             </button>
         </div>
         <br>
@@ -112,7 +120,7 @@
                     <textarea id="buyAmount" onkeypress="TestInvalidNum()">
                     </textarea>
                 </div>-->
-                <div class="CT">
+            <!--<div class="CT">
                     <h1 class="fivemargin">
                         Main Menu
                     </h1>
@@ -138,17 +146,89 @@
                     <button onclick="ReadFromStorage('chronostasis-save')">
                         <p class="nomargin">Load</p>
                     </button>
+                </div>-->
+                <div class="CT">
+                    <button onclick="BuyAutobuyer.TimeTiers.Tier1()">
+                        <p class="nomargin">Autobuyer</p>
+                        <p class="nomargin">Time Generator T1</p>
+                        <br></br>
+                        <p class="nomargin" id="TT1Msec">Freq: 1000ms</p>
+                        <p class="nomargin" id="TT1Cost">Cost: 10</p>
+                    </button>
+                    <button onclick="BuyItem.TimeTiers.Tier1()">
+                        <p class="nomargin">Autobuyer</p>
+                        <p class="nomargin">Time Generator T2</p>
+                        <br></br>
+                        <p class="nomargin" id="TT1Msec">Freq: 1000ms</p>
+                        <p class="nomargin" id="TT1Cost">Cost: 10</p>
+                    </button>
+                    <button onclick="BuyItem.TimeTiers.Tier1()">
+                        <p class="nomargin">Autobuyer</p>
+                        <p class="nomargin">Time Generator T3</p>
+                        <br></br>
+                        <p class="nomargin" id="TT1Msec">Freq: 1000ms</p>
+                        <p class="nomargin" id="TT1Cost">Cost: 10</p>
+                    </button>
+                    <button onclick="BuyItem.TimeTiers.Tier1()">
+                        <p class="nomargin">Autobuyer</p>
+                        <p class="nomargin">Time Generator T4</p>
+                        <br></br>
+                        <p class="nomargin" id="TT1Msec">Freq: 1000ms</p>
+                        <p class="nomargin" id="TT1Cost">Cost: 10</p>
+                    </button>
+                    <button onclick="BuyItem.TimeTiers.Tier1()">
+                        <p class="nomargin">Autobuyer</p>
+                        <p class="nomargin">Time Generator T5</p>
+                        <br></br>
+                        <p class="nomargin" id="TT1Msec">Freq: 1000ms</p>
+                        <p class="nomargin" id="TT1Cost">Cost: 10</p>
+                    </button>
+                </div>
+                <div class="CT">
+                    <button onclick="BuyItem.TimeTiers.Tier6()">
+                        <p class="nomargin">Autobuyer</p>
+                        <p class="nomargin">Time Generator T6</p>
+                        <br></br>
+                        <p class="nomargin" id="TT1Msec">Freq: 1000ms</p>
+                        <p class="nomargin" id="TT1Cost">Cost: 10</p>
+                    </button>
+                    <button onclick="BuyItem.TimeTiers.Tier7()">
+                        <p class="nomargin">Autobuyer</p>
+                        <p class="nomargin">Time Generator T7</p>
+                        <br></br>
+                        <p class="nomargin" id="TT1Msec">Freq: 1000ms</p>
+                        <p class="nomargin" id="TT1Cost">Cost: 10</p>
+                    </button>
+                    <button onclick="BuyItem.TimeTiers.Tier8()">
+                        <p class="nomargin">Autobuyer</p>
+                        <p class="nomargin">Time Generator T8</p>
+                        <br></br>
+                        <p class="nomargin" id="TT1Msec">Freq: 1000ms</p>
+                        <p class="nomargin" id="TT1Cost">Cost: 10</p>
+                    </button>
+                    <button onclick="BuyItem.TimeTiers.Tier9()">
+                        <p class="nomargin">Autobuyer</p>
+                        <p class="nomargin">Time Generator T9</p>
+                        <br></br>
+                        <p class="nomargin" id="TT1Msec">Freq: 1000ms</p>
+                        <p class="nomargin" id="TT1Cost">Cost: 10</p>
+                    </button>
+                    <button onclick="BuyItem.TimeTiers.Tier10()">
+                        <p class="nomargin">Autobuyer</p>
+                        <p class="nomargin">Time Generator T10</p>
+                        <br></br>
+                        <p class="nomargin" id="TT1Msec">Freq: 1000ms</p>
+                        <p class="nomargin" id="TT1Cost">Cost: 10</p>
+                    </button>
                 </div>
             </div>
         </div>
     </body>
-    <script type="text/javascript" src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-    <script type="text/javascript" src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-    <script type="text/javascript" src="number-libraries/OmegaNum.js"></script>
-    <script type="text/javascript" src="number-libraries/format-omeganum.js"></script>
     <script type="text/javascript" src="save-load/lz-string.js"></script>
     <script type="text/javascript" src="save-load/saveload.js"></script>
     <script type="text/javascript" src="main/main.js"></script>
+    <script type="text/javascript" src="main/autobuyer.js"></script>
     <script type="text/javascript" src="react-elements/TimeTierElements.js"></script>
     <script type="text/javascript" src="react-elements/MainMenuElements.js"></script>
+    <script type="text/javascript" src="react-elements/AutobuyerElements.js"></script>
 </html>

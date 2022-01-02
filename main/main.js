@@ -40,6 +40,34 @@ var gameData = {
             Tier9: new OmegaNum("1"),
             Tier10: new OmegaNum("1")
         },
+        Autobuyer: {
+            PriceRatio: new OmegaNum("2"),
+            BuyAmount: new OmegaNum("1"),
+            Amount: {
+                Tier1: new OmegaNum("0"),
+                Tier2: new OmegaNum("0"),
+                Tier3: new OmegaNum("0"),
+                Tier4: new OmegaNum("0"),
+                Tier5: new OmegaNum("0"),
+                Tier6: new OmegaNum("0"),
+                Tier7: new OmegaNum("0"),
+                Tier8: new OmegaNum("0"),
+                Tier9: new OmegaNum("0"),
+                Tier10: new OmegaNum("0")
+            },
+            Cost: {
+                Tier1: new OmegaNum("1e3"),
+                Tier2: new OmegaNum("1e6"),
+                Tier3: new OmegaNum("1e9"),
+                Tier4: new OmegaNum("1e12"),
+                Tier5: new OmegaNum("1e15"),
+                Tier6: new OmegaNum("1e18"),
+                Tier7: new OmegaNum("1e21"),
+                Tier8: new OmegaNum("1e24"),
+                Tier9: new OmegaNum("1e27"),
+                Tier10: new OmegaNum("1e30")
+            }
+        },
         Cost: {
             Tier1: new OmegaNum("10"),
             Tier2: new OmegaNum("1e3"),
@@ -215,6 +243,9 @@ var MenuSwitch = {
     Time: function() {
         gameData.gameState = "TimeTierMenu";
     },
+    Autobuyer: function() {
+        gameData.gameState = "AutobuyerMenu";
+    },
 }
 
 // intialize some variables
@@ -223,8 +254,8 @@ var tte = gameData.TimeTiers.Effective;
 var tta = gameData.TimeTiers.Actual;
 var ttm = gameData.TimeTiers.Multiplier;
 var ttc = gameData.TimeTiers.Cost;
-var ts = 100;
-var lockedMessage = "Locked";
+var ts = new OmegaNum(100);
+var lockedMessage = "Locked 🔒";
 var TT1M;
 var TT2M;
 var TT3M;
@@ -252,16 +283,16 @@ function TimeTierGameTick()
     tta = gameData.TimeTiers.Actual;
     ttm = gameData.TimeTiers.Multiplier;
     ttc = gameData.TimeTiers.Cost;
-    TT1M = ttm.Tier1 * tta.Tier1.sqrt(2);
-    TT2M = ttm.Tier2 * tta.Tier2.sqrt(2);
-    TT3M = ttm.Tier3 * tta.Tier3.sqrt(2);
-    TT4M = ttm.Tier4 * tta.Tier4.sqrt(2);
-    TT5M = ttm.Tier5 * tta.Tier5.sqrt(2);
-    TT6M = ttm.Tier6 * tta.Tier6.sqrt(2);
-    TT7M = ttm.Tier7 * tta.Tier7.sqrt(2);
-    TT8M = ttm.Tier8 * tta.Tier8.sqrt(2);
-    TT9M = ttm.Tier9 * tta.Tier9.sqrt(2);
-    TT10M = ttm.Tier10 * tta.Tier10.sqrt(2);
+    TT1M = ttm.Tier1.mul(tta.Tier1.sqrt());
+    TT2M = ttm.Tier2.mul(tta.Tier2.sqrt());
+    TT3M = ttm.Tier3.mul(tta.Tier3.sqrt());
+    TT4M = ttm.Tier4.mul(tta.Tier4.sqrt());
+    TT5M = ttm.Tier5.mul(tta.Tier5.sqrt());
+    TT6M = ttm.Tier6.mul(tta.Tier6.sqrt());
+    TT7M = ttm.Tier7.mul(tta.Tier7.sqrt());
+    TT8M = ttm.Tier8.mul(tta.Tier8.sqrt());
+    TT9M = ttm.Tier9.mul(tta.Tier9.sqrt());
+    TT10M = ttm.Tier10.mul(tta.Tier10.sqrt());
     tte.Tier9 = tte.Tier9.add(tte.Tier10.mul(TT10M).div(ts));
     tte.Tier8 = tte.Tier8.add(tte.Tier9.mul(TT9M).div(ts));
     tte.Tier7 = tte.Tier7.add(tte.Tier8.mul(TT8M).div(ts));

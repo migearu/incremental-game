@@ -4,10 +4,12 @@ window.setInterval(function(){
         var importexport = React.createElement("div", {
             className: "CT"
         }, React.createElement("button", {
+            className: "hover",
             onClick: Import
         }, React.createElement("p", {
             className: "nomargin"
         }, "Import")), React.createElement("button", {
+            className: "hover",
             onClick: Export
         }, React.createElement("p", {
             className: "nomargin"
@@ -29,10 +31,12 @@ window.setInterval(function(){
         var saveload = React.createElement("div", {
             className: "CT"
         }, React.createElement("button", {
+            className: "hover",
             onClick: WriteToStorage
         }, React.createElement("p", {
             className: "nomargin"
         }, "Save")), React.createElement("button", {
+            className: "hover",
             onClick: ReadFromStorage
         }, React.createElement("p", {
             className: "nomargin"

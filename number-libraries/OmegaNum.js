@@ -1158,6 +1158,18 @@
       }
       return r;
     };
+    P.toHyperEFixed=function (dcm, dcm2=dcm){
+      if (this.sign==-1) return "-"+this.abs().toHyperE();
+      if (isNaN(this.array[0])) return "NaN";
+      if (!isFinite(this.array[0])) return "Infinity";
+      if (this.lt(OmegaNum.MAX_SAFE_INTEGER)) return String(this.array[0].toFixed(dcm));
+      if (this.lt(OmegaNum.E_MAX_SAFE_INTEGER)) return "E"+this.array[0].toFixed(dcm);
+      var r="E"+this.array[0].toFixed(dcm)+"#"+this.array[1].toFixed(dcm2);
+      for (var i=2;i<this.array.length;++i){
+        r+="#"+(this.array[i]+1).toFixed(dcm2);
+      }
+      return r;
+    };
     Q.fromNumber=function (input){
       if (typeof input!="number") throw Error(invalidArgument+"Expected Number");
       var x=new OmegaNum();

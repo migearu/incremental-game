@@ -6,8 +6,10 @@
 :root {
     --black10: rgb(10, 10, 10);
     --black20: rgb(20, 20, 20);
+    --black50: rgb(50, 50, 50);
     --white230: rgb(230, 230, 230);
     --activegreen: #8cff8c;
+    --disabledred: #ff4f4f;
 }
 
 .CT {
@@ -51,6 +53,19 @@ button {
     color: var(--white230);
     padding: 10px;
     width: 200px;
+}
+
+.hover:hover {
+    border: 2px solid var(--activegreen);
+    background-color: var(--black50);
+    color: var(--white230);
+}
+
+.disabled {
+    font-family: Telegrama;
+    border: 2px solid var(--disabledred);
+    background-color: var(--black50);
+    color: var(--white230);
 }
 
 .flexbutton {
