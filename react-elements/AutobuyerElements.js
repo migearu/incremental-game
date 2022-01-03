@@ -203,7 +203,93 @@ setInterval(function() {
         }, TimeTier1AutobuyerReactElement, TimeTier2AutobuyerReactElement, TimeTier3AutobuyerReactElement, TimeTier4AutobuyerReactElement, TimeTier5AutobuyerReactElement),
         React.createElement("div", {
             className: "CT"
-        }, TimeTier6AutobuyerReactElement, TimeTier7AutobuyerReactElement, TimeTier8AutobuyerReactElement, TimeTier9AutobuyerReactElement, TimeTier10AutobuyerReactElement));
+        }, React.createElement("label", {
+            className: "switch matchbtnspacing"
+        }, React.createElement("input", {
+            type: "checkbox",
+            defaultChecked: true,
+            id: "CheckboxT1Autobuyer"
+        }), React.createElement("span", {
+            className: "slider round "
+        })), React.createElement("label", {
+            className: "switch matchbtnspacing"
+        }, React.createElement("input", {
+            type: "checkbox",
+            defaultChecked: true,
+            id: "CheckboxT2Autobuyer"
+        }), React.createElement("span", {
+            className: "slider round"
+        })), React.createElement("label", {
+            className: "switch matchbtnspacing"
+        }, React.createElement("input", {
+            type: "checkbox",
+            defaultChecked: true,
+            id: "CheckboxT3Autobuyer"
+        }), React.createElement("span", {
+            className: "slider round"
+        })), React.createElement("label", {
+            className: "switch matchbtnspacing"
+        }, React.createElement("input", {
+            type: "checkbox",
+            defaultChecked: true,
+            id: "CheckboxT4Autobuyer"
+        }), React.createElement("span", {
+            className: "slider round"
+        })), React.createElement("label", {
+            className: "switch matchbtnspacing"
+        }, React.createElement("input", {
+            type: "checkbox",
+            defaultChecked: true,
+            id: "CheckboxT5Autobuyer"
+        }), React.createElement("span", {
+            className: "slider round"
+        }))),
+        React.createElement("div", {
+            className: "CT"
+        }, TimeTier6AutobuyerReactElement, TimeTier7AutobuyerReactElement, TimeTier8AutobuyerReactElement, TimeTier9AutobuyerReactElement, TimeTier10AutobuyerReactElement),
+        React.createElement("div", {
+            className: "CT"
+        }, React.createElement("label", {
+            className: "switch matchbtnspacing"
+        }, React.createElement("input", {
+            type: "checkbox",
+            defaultChecked: true,
+            id: "CheckboxT6Autobuyer"
+        }), React.createElement("span", {
+            className: "slider round "
+        })), React.createElement("label", {
+            className: "switch matchbtnspacing"
+        }, React.createElement("input", {
+            type: "checkbox",
+            defaultChecked: true,
+            id: "CheckboxT7Autobuyer"
+        }), React.createElement("span", {
+            className: "slider round"
+        })), React.createElement("label", {
+            className: "switch matchbtnspacing"
+        }, React.createElement("input", {
+            type: "checkbox",
+            defaultChecked: true,
+            id: "CheckboxT8Autobuyer"
+        }), React.createElement("span", {
+            className: "slider round"
+        })), React.createElement("label", {
+            className: "switch matchbtnspacing"
+        }, React.createElement("input", {
+            type: "checkbox",
+            defaultChecked: true,
+            id: "CheckboxT9Autobuyer"
+        }), React.createElement("span", {
+            className: "slider round"
+        })), React.createElement("label", {
+            className: "switch matchbtnspacing"
+        }, React.createElement("input", {
+            type: "checkbox",
+            defaultChecked: true,
+            id: "CheckboxT10Autobuyer"
+        }), React.createElement("span", {
+            className: "slider round"
+        }))));
 
         ReactDOM.render(element, document.getElementById('main'));
     }
