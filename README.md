@@ -32,4 +32,7 @@ Added a hover effect.<br>
 ## Extra
 N/A
 ## Bugs
-N/A
+Intervals stuck at 1000 ms.
+## Update 3.1
+### In-Game
+Properly added Autobuyers, added an on/off switch, as well as properly implementing intervals.
