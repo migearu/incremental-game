@@ -2,6 +2,8 @@
 Incremental game made in HTML, JavaScript, and CSS.<br>
 Hope you enjoy!<br><br>
 Link: https://codermanez.github.io/incremental-game/main.html<br><br>
+# Credits where they're due
+[Hector Polanco](https://github.com/hecpolanco), [Simple-Music-Player](https://github.com/hecpolanco/Simple-Music-Player)
 # Things I don't know how to fix
 ~~Buy Amount text field not excluding special characters.~~ Fixed with regex, taken from the OmegaNum.js library (41)
 # Ideas and Calculations
