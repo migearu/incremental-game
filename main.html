@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>plchld</title>
         <link rel="stylesheet" href="main/main.css">
-        <link rel="icon" href="extra-elements/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="main/assets/favicon.ico" type="image/x-icon">
         <script type="text/javascript" src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
         <script type="text/javascript" src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
         <script type="text/javascript" src="number-libraries/OmegaNum.js"></script>
@@ -16,8 +16,15 @@
         </script>
     </head>
     <body>
-        <h1 class="CT fivemargin" id="TPObject">{time placeholder}</h1>
-        <p class="CT fivemargin">Time Particles</p>
+        <audio src="main/assets/music/track1.mp3" id="song" loop></audio>
+        <div id="FullTPObject">
+            <h1 class="CT fivemargin" id="TPObject">{time placeholder}</h1>
+            <p class="CT fivemargin">Time Particles</p>
+        </div>
+        <div id="FullTCObject">
+            <h1 class="CT fivemargin" id="TCObject">{time c placeholder}</h1>
+            <p class="CT fivemargin">Time Crystals</p>
+        </div>
         <div class="CT">
             <button onclick="MenuSwitch.Menu()" class="flexbutton hover">
                 <p class="nomargin">Menu</p>
@@ -27,6 +34,12 @@
             </button>
             <button onclick="MenuSwitch.Autobuyer()" class="flexbutton hover">
                 <p class="nomargin">Autobuyers</p>
+            </button>
+            <button onclick="MenuSwitch.Prestige()" class="flexbutton hover">
+                <p class="nomargin">Prestige</p>
+            </button>
+            <button onclick="MenuSwitch.Song()" class="flexbutton hover">
+                <p class="nomargin">Song</p>
             </button>
         </div>
         <br>
@@ -228,7 +241,12 @@
     <script type="text/javascript" src="save-load/saveload.js"></script>
     <script type="text/javascript" src="main/main.js"></script>
     <script type="text/javascript" src="main/autobuyer.js"></script>
+    <script type="text/javascript" src="main/prestige.js"></script>
+    <script type="text/javascript" src="main/player.js"></script>
+    <script type="text/javascript" src="react-elements/CurrencyElements.js"></script>
     <script type="text/javascript" src="react-elements/TimeTierElements.js"></script>
     <script type="text/javascript" src="react-elements/MainMenuElements.js"></script>
     <script type="text/javascript" src="react-elements/AutobuyerElements.js"></script>
+    <script type="text/javascript" src="react-elements/PrestigeElements.js"></script>
+    <script type="text/javascript" src="react-elements/PlayerElements.js"></script>
 </html>

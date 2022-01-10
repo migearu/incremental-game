@@ -207,7 +207,7 @@ setInterval(function() {
             className: "switch matchbtnspacing"
         }, React.createElement("input", {
             type: "checkbox",
-            defaultChecked: true,
+            defaultChecked: CheckboxT1AutobuyerChecked,
             id: "CheckboxT1Autobuyer"
         }), React.createElement("span", {
             className: "slider round "
@@ -215,7 +215,7 @@ setInterval(function() {
             className: "switch matchbtnspacing"
         }, React.createElement("input", {
             type: "checkbox",
-            defaultChecked: true,
+            defaultChecked: CheckboxT2AutobuyerChecked,
             id: "CheckboxT2Autobuyer"
         }), React.createElement("span", {
             className: "slider round"
@@ -223,7 +223,7 @@ setInterval(function() {
             className: "switch matchbtnspacing"
         }, React.createElement("input", {
             type: "checkbox",
-            defaultChecked: true,
+            defaultChecked: CheckboxT3AutobuyerChecked,
             id: "CheckboxT3Autobuyer"
         }), React.createElement("span", {
             className: "slider round"
@@ -231,7 +231,7 @@ setInterval(function() {
             className: "switch matchbtnspacing"
         }, React.createElement("input", {
             type: "checkbox",
-            defaultChecked: true,
+            defaultChecked: CheckboxT4AutobuyerChecked,
             id: "CheckboxT4Autobuyer"
         }), React.createElement("span", {
             className: "slider round"
@@ -239,7 +239,7 @@ setInterval(function() {
             className: "switch matchbtnspacing"
         }, React.createElement("input", {
             type: "checkbox",
-            defaultChecked: true,
+            defaultChecked: CheckboxT5AutobuyerChecked,
             id: "CheckboxT5Autobuyer"
         }), React.createElement("span", {
             className: "slider round"
@@ -253,7 +253,7 @@ setInterval(function() {
             className: "switch matchbtnspacing"
         }, React.createElement("input", {
             type: "checkbox",
-            defaultChecked: true,
+            defaultChecked: CheckboxT6AutobuyerChecked,
             id: "CheckboxT6Autobuyer"
         }), React.createElement("span", {
             className: "slider round "
@@ -261,7 +261,7 @@ setInterval(function() {
             className: "switch matchbtnspacing"
         }, React.createElement("input", {
             type: "checkbox",
-            defaultChecked: true,
+            defaultChecked: CheckboxT7AutobuyerChecked,
             id: "CheckboxT7Autobuyer"
         }), React.createElement("span", {
             className: "slider round"
@@ -269,7 +269,7 @@ setInterval(function() {
             className: "switch matchbtnspacing"
         }, React.createElement("input", {
             type: "checkbox",
-            defaultChecked: true,
+            defaultChecked: CheckboxT8AutobuyerChecked,
             id: "CheckboxT8Autobuyer"
         }), React.createElement("span", {
             className: "slider round"
@@ -277,7 +277,7 @@ setInterval(function() {
             className: "switch matchbtnspacing"
         }, React.createElement("input", {
             type: "checkbox",
-            defaultChecked: true,
+            defaultChecked: CheckboxT9AutobuyerChecked,
             id: "CheckboxT9Autobuyer"
         }), React.createElement("span", {
             className: "slider round"
@@ -285,7 +285,7 @@ setInterval(function() {
             className: "switch matchbtnspacing"
         }, React.createElement("input", {
             type: "checkbox",
-            defaultChecked: true,
+            defaultChecked: CheckboxT10AutobuyerChecked,
             id: "CheckboxT10Autobuyer"
         }), React.createElement("span", {
             className: "slider round"

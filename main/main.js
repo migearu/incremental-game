@@ -1,7 +1,12 @@
 var gameData = {
     gameState: "TimeTierMenu",
-    timeParticles: new OmegaNum("100"),
+    timeParticles: new OmegaNum("10"),
+    timeCrystals: new OmegaNum("0"),
     BuyAmount: new OmegaNum("1"),
+    Prestige: {
+        HasFirstTierPrestige: false,
+        TCLog: new OmegaNum("10")
+    },
     TimeTiers: {
         PriceRatio: new OmegaNum("1.15"),
         Effective: {
@@ -82,6 +87,7 @@ var gameData = {
         }
     }
 }
+const StarterGameData = Object.assign({}, gameData);
 var BuyItem = {
     TimeTiers: {
         Tier1: function() {
@@ -246,6 +252,12 @@ var MenuSwitch = {
     Autobuyer: function() {
         gameData.gameState = "AutobuyerMenu";
     },
+    Prestige: function() {
+        gameData.gameState = "PrestigeMenu";
+    },
+    Song: function() {
+        gameData.gameState = "SongMenu";
+    }
 }
 
 // intialize some variables
@@ -254,7 +266,7 @@ var tte = gameData.TimeTiers.Effective;
 var tta = gameData.TimeTiers.Actual;
 var ttm = gameData.TimeTiers.Multiplier;
 var ttc = gameData.TimeTiers.Cost;
-var ts = new OmegaNum(100);
+var ts = new OmegaNum("100");
 var lockedMessage = "Locked 🔒";
 var TT1M;
 var TT2M;
@@ -283,16 +295,16 @@ function TimeTierGameTick()
     tta = gameData.TimeTiers.Actual;
     ttm = gameData.TimeTiers.Multiplier;
     ttc = gameData.TimeTiers.Cost;
-    TT1M = ttm.Tier1.mul(tta.Tier1.sqrt());
-    TT2M = ttm.Tier2.mul(tta.Tier2.sqrt());
-    TT3M = ttm.Tier3.mul(tta.Tier3.sqrt());
-    TT4M = ttm.Tier4.mul(tta.Tier4.sqrt());
-    TT5M = ttm.Tier5.mul(tta.Tier5.sqrt());
-    TT6M = ttm.Tier6.mul(tta.Tier6.sqrt());
-    TT7M = ttm.Tier7.mul(tta.Tier7.sqrt());
-    TT8M = ttm.Tier8.mul(tta.Tier8.sqrt());
-    TT9M = ttm.Tier9.mul(tta.Tier9.sqrt());
-    TT10M = ttm.Tier10.mul(tta.Tier10.sqrt());
+    TT1M = ttm.Tier1.mul(tta.Tier1.sqrt()).mul(OmegaNum.logarithm(gameData.timeCrystals.add(new OmegaNum(gameData.timeCrystals.gte(new OmegaNum(1)) ? "0" : "1")), OmegaNum("10")).add(new OmegaNum("1")));
+    TT2M = ttm.Tier2.mul(tta.Tier2.sqrt()).mul(OmegaNum.logarithm(gameData.timeCrystals.add(new OmegaNum(gameData.timeCrystals.gte(new OmegaNum(1)) ? "0" : "1")), OmegaNum("10")).add(new OmegaNum("1")));
+    TT3M = ttm.Tier3.mul(tta.Tier3.sqrt()).mul(OmegaNum.logarithm(gameData.timeCrystals.add(new OmegaNum(gameData.timeCrystals.gte(new OmegaNum(1)) ? "0" : "1")), OmegaNum("10")).add(new OmegaNum("1")));
+    TT4M = ttm.Tier4.mul(tta.Tier4.sqrt()).mul(OmegaNum.logarithm(gameData.timeCrystals.add(new OmegaNum(gameData.timeCrystals.gte(new OmegaNum(1)) ? "0" : "1")), OmegaNum("10")).add(new OmegaNum("1")));
+    TT5M = ttm.Tier5.mul(tta.Tier5.sqrt()).mul(OmegaNum.logarithm(gameData.timeCrystals.add(new OmegaNum(gameData.timeCrystals.gte(new OmegaNum(1)) ? "0" : "1")), OmegaNum("10")).add(new OmegaNum("1")));
+    TT6M = ttm.Tier6.mul(tta.Tier6.sqrt()).mul(OmegaNum.logarithm(gameData.timeCrystals.add(new OmegaNum(gameData.timeCrystals.gte(new OmegaNum(1)) ? "0" : "1")), OmegaNum("10")).add(new OmegaNum("1")));
+    TT7M = ttm.Tier7.mul(tta.Tier7.sqrt()).mul(OmegaNum.logarithm(gameData.timeCrystals.add(new OmegaNum(gameData.timeCrystals.gte(new OmegaNum(1)) ? "0" : "1")), OmegaNum("10")).add(new OmegaNum("1")));
+    TT8M = ttm.Tier8.mul(tta.Tier8.sqrt()).mul(OmegaNum.logarithm(gameData.timeCrystals.add(new OmegaNum(gameData.timeCrystals.gte(new OmegaNum(1)) ? "0" : "1")), OmegaNum("10")).add(new OmegaNum("1")));
+    TT9M = ttm.Tier9.mul(tta.Tier9.sqrt()).mul(OmegaNum.logarithm(gameData.timeCrystals.add(new OmegaNum(gameData.timeCrystals.gte(new OmegaNum(1)) ? "0" : "1")), OmegaNum("10")).add(new OmegaNum("1")));
+    TT10M = ttm.Tier10.mul(tta.Tier10.sqrt()).mul(OmegaNum.logarithm(gameData.timeCrystals.add(new OmegaNum(gameData.timeCrystals.gte(new OmegaNum(1)) ? "0" : "1")), OmegaNum("10")).add(new OmegaNum("1")));
     tte.Tier9 = tte.Tier9.add(tte.Tier10.mul(TT10M).div(ts));
     tte.Tier8 = tte.Tier8.add(tte.Tier9.mul(TT9M).div(ts));
     tte.Tier7 = tte.Tier7.add(tte.Tier8.mul(TT8M).div(ts));
@@ -339,7 +351,6 @@ function TimeTierUITick()
     TT8C = gameData.BuyAmount.lte(new OmegaNum("0")) ? OmegaNum.sumGeometricSeries(TT8CAfford, gameData.TimeTiers.Cost.Tier8, gameData.TimeTiers.PriceRatio, gameData.TimeTiers.Actual.Tier8) : OmegaNum.sumGeometricSeries(gameData.BuyAmount, ttc.Tier8, gameData.TimeTiers.PriceRatio, tta.Tier8);
     TT9C = gameData.BuyAmount.lte(new OmegaNum("0")) ? OmegaNum.sumGeometricSeries(TT9CAfford, gameData.TimeTiers.Cost.Tier9, gameData.TimeTiers.PriceRatio, gameData.TimeTiers.Actual.Tier9) : OmegaNum.sumGeometricSeries(gameData.BuyAmount, ttc.Tier9, gameData.TimeTiers.PriceRatio, tta.Tier9);
     TT10C = gameData.BuyAmount.lte(new OmegaNum("0")) ? OmegaNum.sumGeometricSeries(TT10CAfford, gameData.TimeTiers.Cost.Tier10, gameData.TimeTiers.PriceRatio, gameData.TimeTiers.Actual.Tier10) : OmegaNum.sumGeometricSeries(gameData.BuyAmount, ttc.Tier10, gameData.TimeTiers.PriceRatio, tta.Tier10);
-    document.getElementById("TPObject").textContent = format(gameData.timeParticles, 5);
 }
 
 function GameTick()
