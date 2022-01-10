@@ -54,7 +54,8 @@ Added 2 more tracks.
 Fixed hardcoded background path.
 ## Update 4.2
 ### In-Game
-Fixed a lot of bugs that were pointed out by [this thread](https://www.reddit.com/r/incremental_games/comments/s0c5al/development_of_a_new_game_chronostasis/).
+Fixed a lot of bugs that were pointed out by [this thread](https://www.reddit.com/r/incremental_games/comments/s0c5al/development_of_a_new_game_chronostasis/).<br>
+<br>
 Fixed:<br>
 Time Crystals showing up as Time Particles.<br>
 Prestige not resetting generators.<br>
