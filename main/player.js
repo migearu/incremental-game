@@ -30,10 +30,12 @@ function playPause() {
         pPause.src = "main/assets/icons/pause.png"
         song.play();
         playing = false;
+        extPlaying = false;
     } else {
         pPause.src = "main/assets/icons/play.png"
         song.pause();
         playing = true;
+        extPlaying = true;
     }
 }
 // automatically play the next song at the end of the audio object's duration
