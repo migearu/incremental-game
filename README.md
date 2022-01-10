@@ -48,3 +48,6 @@ Credit for the song player goes to Hector Polanco.<br>
 Added assets folder.
 ## Bugs
 None as of yet, although I will try to look through to find any.
+## Update 4.1
+### In-Game
+Added 2 more tracks.
