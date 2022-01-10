@@ -26,9 +26,7 @@ function LoadHelper(obj)
             return LoadHelper(obj[key]);
         }
         if (typeof obj[key] === 'object' && 'array' in obj[key] && 'sign' in obj[key]) {
-            console.log(obj[key])
             obj[key] = new OmegaNum(obj[key]);
-            console.log(obj[key])
         }
     });
 }
@@ -50,3 +48,7 @@ function Export()
     document.getElementById("readFrom").value = LZString.compressToBase64(JSON.stringify(gameData));
     alert("Save has been exported!");
 }
+
+setInterval(() => {
+    WriteToStorage(gameData);
+}, 30000);

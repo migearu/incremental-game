@@ -12,7 +12,7 @@ setInterval(function() {
         id: "TPObject"
     }, format(gameData.timeCrystals, 5)), React.createElement("p", {
         className: "CT fivemargin"
-    }, "Time Particles")) : React.createElement("div", null);
+    }, "Time Crystals")) : React.createElement("div", null);
 
     ReactDOM.render(TimeParticleRender, document.getElementById('FullTPObject'));
     ReactDOM.render(TimeCrystalRender, document.getElementById('FullTCObject'));

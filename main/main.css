@@ -329,25 +329,3 @@ textarea {
 #progress-bar:focus {
     outline: none;
 }
-
-@media screen and (prefers-color-scheme: light) {
-    html {
-        background-color: var(--white230);
-        color: var(--black10);
-        font-family: Telegrama;
-        size: 100%;
-    }
-
-    button {
-        font-family: Telegrama;
-        border: 2px solid #000000;
-        border-radius: 4px;
-        position: relative;
-        cursor: pointer;
-        margin: 2px;
-        background-color: var(--white230);
-        color: var(--black20);
-        padding: 10px;
-        width: 200px;
-    }
-}

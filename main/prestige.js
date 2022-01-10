@@ -4,8 +4,8 @@ var BuyPrestige = {
         {
             var tempTC = gameData.timeCrystals.add(TimeCrystalGain(gameData.timeParticles));
             var tempGS = gameData.gameState.repeat(1);
+            gameData = _.cloneDeep(StarterGameData);
             if (!gameData.Prestige.HasFirstTierPrestige) gameData.Prestige.HasFirstTierPrestige = true;
-            gameData = Object.assign(gameData, StarterGameData);
             gameData.timeCrystals = tempTC;
             gameData.gameState = tempGS;
         }

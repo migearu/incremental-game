@@ -12,7 +12,7 @@ window.setInterval(function(){
     if (gameData.gameState === "TimeTierMenu")
     {
         TimeTier1BasicReactElement = React.createElement("button", {
-            className: "hover",
+            className: gameData.timeParticles.gte(OmegaNum.sumGeometricSeries(gameData.BuyAmount, gameData.TimeTiers.Cost.Tier1, gameData.TimeTiers.PriceRatio, gameData.TimeTiers.Actual.Tier1)) && gameData.BuyAmount.gt(new OmegaNum("0")) ? "hover" : "hover disabled",
             onClick: BuyItem.TimeTiers.Tier1
         }, React.createElement("p", {
             className: "nomargin"
@@ -34,7 +34,7 @@ window.setInterval(function(){
 
 
         TimeTier2BasicReactElement = React.createElement("button", {
-            className: "hover",
+            className: gameData.timeParticles.gte(OmegaNum.sumGeometricSeries(gameData.BuyAmount, gameData.TimeTiers.Cost.Tier2, gameData.TimeTiers.PriceRatio, gameData.TimeTiers.Actual.Tier2)) && gameData.BuyAmount.gt(new OmegaNum("0")) ? "hover" : "hover disabled",
             onClick: BuyItem.TimeTiers.Tier2
         }, React.createElement("p", {
             className: "nomargin"
@@ -56,7 +56,7 @@ window.setInterval(function(){
 
 
         TimeTier3BasicReactElement = React.createElement("button", {
-            className: "hover",
+            className: gameData.timeParticles.gte(OmegaNum.sumGeometricSeries(gameData.BuyAmount, gameData.TimeTiers.Cost.Tier3, gameData.TimeTiers.PriceRatio, gameData.TimeTiers.Actual.Tier3)) && gameData.BuyAmount.gt(new OmegaNum("0")) ? "hover" : "hover disabled",
             onClick: BuyItem.TimeTiers.Tier3
         }, React.createElement("p", {
             className: "nomargin"
@@ -78,7 +78,7 @@ window.setInterval(function(){
 
 
         TimeTier4BasicReactElement = React.createElement("button", {
-            className: "hover",
+            className: gameData.timeParticles.gte(OmegaNum.sumGeometricSeries(gameData.BuyAmount, gameData.TimeTiers.Cost.Tier4, gameData.TimeTiers.PriceRatio, gameData.TimeTiers.Actual.Tier4)) && gameData.BuyAmount.gt(new OmegaNum("0")) ? "hover" : "hover disabled",
             onClick: BuyItem.TimeTiers.Tier4
         }, React.createElement("p", {
             className: "nomargin"
@@ -100,7 +100,7 @@ window.setInterval(function(){
 
 
         TimeTier5BasicReactElement = React.createElement("button", {
-            className: "hover",
+            className: gameData.timeParticles.gte(OmegaNum.sumGeometricSeries(gameData.BuyAmount, gameData.TimeTiers.Cost.Tier5, gameData.TimeTiers.PriceRatio, gameData.TimeTiers.Actual.Tier5)) && gameData.BuyAmount.gt(new OmegaNum("0")) ? "hover" : "hover disabled",
             onClick: BuyItem.TimeTiers.Tier5
         }, React.createElement("p", {
             className: "nomargin"
@@ -122,7 +122,7 @@ window.setInterval(function(){
 
 
         TimeTier6BasicReactElement = React.createElement("button", {
-            className: "hover",
+            className: gameData.timeParticles.gte(OmegaNum.sumGeometricSeries(gameData.BuyAmount, gameData.TimeTiers.Cost.Tier6, gameData.TimeTiers.PriceRatio, gameData.TimeTiers.Actual.Tier6)) && gameData.BuyAmount.gt(new OmegaNum("0")) ? "hover" : "hover disabled",
             onClick: BuyItem.TimeTiers.Tier6
         }, React.createElement("p", {
             className: "nomargin"
@@ -144,7 +144,7 @@ window.setInterval(function(){
 
 
         TimeTier7BasicReactElement = React.createElement("button", {
-            className: "hover",
+            className: gameData.timeParticles.gte(OmegaNum.sumGeometricSeries(gameData.BuyAmount, gameData.TimeTiers.Cost.Tier7, gameData.TimeTiers.PriceRatio, gameData.TimeTiers.Actual.Tier7)) && gameData.BuyAmount.gt(new OmegaNum("0")) ? "hover" : "hover disabled",
             onClick: BuyItem.TimeTiers.Tier7
         }, React.createElement("p", {
             className: "nomargin"
@@ -166,7 +166,7 @@ window.setInterval(function(){
 
 
         TimeTier8BasicReactElement = React.createElement("button", {
-            className: "hover",
+            className: gameData.timeParticles.gte(OmegaNum.sumGeometricSeries(gameData.BuyAmount, gameData.TimeTiers.Cost.Tier8, gameData.TimeTiers.PriceRatio, gameData.TimeTiers.Actual.Tier8)) && gameData.BuyAmount.gt(new OmegaNum("0")) ? "hover" : "hover disabled",
             onClick: BuyItem.TimeTiers.Tier8
         }, React.createElement("p", {
             className: "nomargin"
@@ -188,7 +188,7 @@ window.setInterval(function(){
 
 
         TimeTier9BasicReactElement = React.createElement("button", {
-            className: "hover",
+            className: gameData.timeParticles.gte(OmegaNum.sumGeometricSeries(gameData.BuyAmount, gameData.TimeTiers.Cost.Tier9, gameData.TimeTiers.PriceRatio, gameData.TimeTiers.Actual.Tier9)) && gameData.BuyAmount.gt(new OmegaNum("0")) ? "hover" : "hover disabled",
             onClick: BuyItem.TimeTiers.Tier9
         }, React.createElement("p", {
             className: "nomargin"
@@ -210,7 +210,7 @@ window.setInterval(function(){
 
 
         TimeTier10BasicReactElement = React.createElement("button", {
-            className: "hover",
+            className: gameData.timeParticles.gte(OmegaNum.sumGeometricSeries(gameData.BuyAmount, gameData.TimeTiers.Cost.Tier10, gameData.TimeTiers.PriceRatio, gameData.TimeTiers.Actual.Tier10)) && gameData.BuyAmount.gt(new OmegaNum("0")) ? "hover" : "hover disabled",
             onClick: BuyItem.TimeTiers.Tier10
         }, React.createElement("p", {
             className: "nomargin"
@@ -252,7 +252,15 @@ window.setInterval(function(){
             className: "CT"
         }, React.createElement("p", {
             className: "fivemargin"
-        }, "Buy Amount"))));
+        }, "Buy Amount")),
+        React.createElement("div", {
+            className: "CT"
+        },
+        React.createElement("button", {
+            onClick: SetBuyMax
+        }, React.createElement("p", {
+            className: "nomargin"
+        }, "Buy Max")))));
 
         ReactDOM.render(element, document.getElementById('main'));
     }

@@ -12,7 +12,7 @@ setInterval(function() {
     if (gameData.gameState === "AutobuyerMenu")
     {
         var TimeTier1AutobuyerReactElement = React.createElement("button", {
-            className: "hover",
+            className: (gameData.TimeTiers.Autobuyer.Amount.Tier1.add(gameData.TimeTiers.Autobuyer.BuyAmount)).lt(upgAutobuyerMax) && gameData.timeParticles.gte(OmegaNum.sumGeometricSeries(gameData.TimeTiers.Autobuyer.BuyAmount, gameData.TimeTiers.Autobuyer.Cost.Tier1, gameData.TimeTiers.Autobuyer.PriceRatio, gameData.TimeTiers.Autobuyer.Amount.Tier1)) ? "hover" : "hover disabled",
             onClick: BuyAutobuyer.TimeTiers.Tier1
         }, React.createElement("p", {
             className: "nomargin"
@@ -31,7 +31,7 @@ setInterval(function() {
 
 
         var TimeTier2AutobuyerReactElement = React.createElement("button", {
-            className: "hover",
+            className: (gameData.TimeTiers.Autobuyer.Amount.Tier2.add(gameData.TimeTiers.Autobuyer.BuyAmount)).lt(upgAutobuyerMax) && gameData.timeParticles.gte(OmegaNum.sumGeometricSeries(gameData.TimeTiers.Autobuyer.BuyAmount, gameData.TimeTiers.Autobuyer.Cost.Tier2, gameData.TimeTiers.Autobuyer.PriceRatio, gameData.TimeTiers.Autobuyer.Amount.Tier2)) ? "hover" : "hover disabled",
             onClick: BuyAutobuyer.TimeTiers.Tier2
         }, React.createElement("p", {
             className: "nomargin"
@@ -50,7 +50,7 @@ setInterval(function() {
 
 
         var TimeTier3AutobuyerReactElement = React.createElement("button", {
-            className: "hover",
+            className: (gameData.TimeTiers.Autobuyer.Amount.Tier3.add(gameData.TimeTiers.Autobuyer.BuyAmount)).lt(upgAutobuyerMax) && gameData.timeParticles.gte(OmegaNum.sumGeometricSeries(gameData.TimeTiers.Autobuyer.BuyAmount, gameData.TimeTiers.Autobuyer.Cost.Tier3, gameData.TimeTiers.Autobuyer.PriceRatio, gameData.TimeTiers.Autobuyer.Amount.Tier3)) ? "hover" : "hover disabled",
             onClick: BuyAutobuyer.TimeTiers.Tier3
         }, React.createElement("p", {
             className: "nomargin"
@@ -69,7 +69,7 @@ setInterval(function() {
 
 
         var TimeTier4AutobuyerReactElement = React.createElement("button", {
-            className: "hover",
+            className: (gameData.TimeTiers.Autobuyer.Amount.Tier4.add(gameData.TimeTiers.Autobuyer.BuyAmount)).lt(upgAutobuyerMax) && gameData.timeParticles.gte(OmegaNum.sumGeometricSeries(gameData.TimeTiers.Autobuyer.BuyAmount, gameData.TimeTiers.Autobuyer.Cost.Tier4, gameData.TimeTiers.Autobuyer.PriceRatio, gameData.TimeTiers.Autobuyer.Amount.Tier4)) ? "hover" : "hover disabled",
             onClick: BuyAutobuyer.TimeTiers.Tier4
         }, React.createElement("p", {
             className: "nomargin"
@@ -88,7 +88,7 @@ setInterval(function() {
 
 
         var TimeTier5AutobuyerReactElement = React.createElement("button", {
-            className: "hover",
+            className: (gameData.TimeTiers.Autobuyer.Amount.Tier5.add(gameData.TimeTiers.Autobuyer.BuyAmount)).lt(upgAutobuyerMax) && gameData.timeParticles.gte(OmegaNum.sumGeometricSeries(gameData.TimeTiers.Autobuyer.BuyAmount, gameData.TimeTiers.Autobuyer.Cost.Tier5, gameData.TimeTiers.Autobuyer.PriceRatio, gameData.TimeTiers.Autobuyer.Amount.Tier5)) ? "hover" : "hover disabled",
             onClick: BuyAutobuyer.TimeTiers.Tier5
         }, React.createElement("p", {
             className: "nomargin"
@@ -107,7 +107,7 @@ setInterval(function() {
 
 
         var TimeTier6AutobuyerReactElement = React.createElement("button", {
-            className: "hover",
+            className: (gameData.TimeTiers.Autobuyer.Amount.Tier6.add(gameData.TimeTiers.Autobuyer.BuyAmount)).lt(upgAutobuyerMax) && gameData.timeParticles.gte(OmegaNum.sumGeometricSeries(gameData.TimeTiers.Autobuyer.BuyAmount, gameData.TimeTiers.Autobuyer.Cost.Tier6, gameData.TimeTiers.Autobuyer.PriceRatio, gameData.TimeTiers.Autobuyer.Amount.Tier6)) ? "hover" : "hover disabled",
             onClick: BuyAutobuyer.TimeTiers.Tier6
         }, React.createElement("p", {
             className: "nomargin"
@@ -126,7 +126,7 @@ setInterval(function() {
 
 
         var TimeTier7AutobuyerReactElement = React.createElement("button", {
-            className: "hover",
+            className: (gameData.TimeTiers.Autobuyer.Amount.Tier7.add(gameData.TimeTiers.Autobuyer.BuyAmount)).lt(upgAutobuyerMax) && gameData.timeParticles.gte(OmegaNum.sumGeometricSeries(gameData.TimeTiers.Autobuyer.BuyAmount, gameData.TimeTiers.Autobuyer.Cost.Tier7, gameData.TimeTiers.Autobuyer.PriceRatio, gameData.TimeTiers.Autobuyer.Amount.Tier7)) ? "hover" : "hover disabled",
             onClick: BuyAutobuyer.TimeTiers.Tier7
         }, React.createElement("p", {
             className: "nomargin"
@@ -145,7 +145,7 @@ setInterval(function() {
 
 
         var TimeTier8AutobuyerReactElement = React.createElement("button", {
-            className: "hover",
+            className: (gameData.TimeTiers.Autobuyer.Amount.Tier8.add(gameData.TimeTiers.Autobuyer.BuyAmount)).lt(upgAutobuyerMax) && gameData.timeParticles.gte(OmegaNum.sumGeometricSeries(gameData.TimeTiers.Autobuyer.BuyAmount, gameData.TimeTiers.Autobuyer.Cost.Tier8, gameData.TimeTiers.Autobuyer.PriceRatio, gameData.TimeTiers.Autobuyer.Amount.Tier8)) ? "hover" : "hover disabled",
             onClick: BuyAutobuyer.TimeTiers.Tier8
         }, React.createElement("p", {
             className: "nomargin"
@@ -164,7 +164,7 @@ setInterval(function() {
 
 
         var TimeTier9AutobuyerReactElement = React.createElement("button", {
-            className: "hover",
+            className: (gameData.TimeTiers.Autobuyer.Amount.Tier9.add(gameData.TimeTiers.Autobuyer.BuyAmount)).lt(upgAutobuyerMax) && gameData.timeParticles.gte(OmegaNum.sumGeometricSeries(gameData.TimeTiers.Autobuyer.BuyAmount, gameData.TimeTiers.Autobuyer.Cost.Tier9, gameData.TimeTiers.Autobuyer.PriceRatio, gameData.TimeTiers.Autobuyer.Amount.Tier9)) ? "hover" : "hover disabled",
             onClick: BuyAutobuyer.TimeTiers.Tier9
         }, React.createElement("p", {
             className: "nomargin"
@@ -183,7 +183,7 @@ setInterval(function() {
 
 
         var TimeTier10AutobuyerReactElement = React.createElement("button", {
-            className: "hover",
+            className: (gameData.TimeTiers.Autobuyer.Amount.Tier10.add(gameData.TimeTiers.Autobuyer.BuyAmount)).lt(upgAutobuyerMax) && gameData.timeParticles.gte(OmegaNum.sumGeometricSeries(gameData.TimeTiers.Autobuyer.BuyAmount, gameData.TimeTiers.Autobuyer.Cost.Tier10, gameData.TimeTiers.Autobuyer.PriceRatio, gameData.TimeTiers.Autobuyer.Amount.Tier10)) ? "hover" : "hover disabled",
             onClick: BuyAutobuyer.TimeTiers.Tier10
         }, React.createElement("p", {
             className: "nomargin"

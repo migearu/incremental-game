@@ -87,7 +87,7 @@ var gameData = {
         }
     }
 }
-const StarterGameData = Object.assign({}, gameData);
+const StarterGameData = _.cloneDeep(gameData);
 var BuyItem = {
     TimeTiers: {
         Tier1: function() {
@@ -372,6 +372,11 @@ function GameTick()
             gameData.BuyAmount = new OmegaNum("0")
         }
     }
+}
+
+function SetBuyMax()
+{
+    document.getElementById("buyAmount").value = "0"
 }
 
 function UITick()
