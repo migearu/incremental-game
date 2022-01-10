@@ -207,7 +207,7 @@ textarea {
     color: rgb(193, 255, 6);
     font-family: Telegrama;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     bottom: 21%;
     left: 28%;
 }
@@ -218,7 +218,7 @@ textarea {
     z-index: 4;
     color: white;
     font-family: Telegrama;
-    font-size: 17px;
+    font-size: 16px;
     bottom: 16%;
     left: 28%;
 }

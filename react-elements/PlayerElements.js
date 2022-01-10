@@ -1,7 +1,7 @@
 setInterval(function() {
     if (gameData.gameState === "SongMenu") {
         var element = React.createElement("div", null, React.createElement("img", {
-                src: "main/assets/images/track1.png",
+                src: songBackgroundCarry,
                 id: "background"
             }), React.createElement("div", {
                 className: "container"

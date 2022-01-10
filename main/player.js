@@ -11,6 +11,20 @@ var songs =
         songBackground: 'main/assets/images/track1.png',
         songArtist: 'N/A',
         songName: 'Track 1'
+    },
+    {
+        songPath: 'main/assets/music/track2.mp3',
+        songThumbnail: 'main/assets/images/track2t.png',
+        songBackground: 'main/assets/images/track2.png',
+        songArtist: 'N/A',
+        songName: 'Track 2'
+    },
+    {
+        songPath: 'main/assets/music/track3.mp3',
+        songThumbnail: 'main/assets/images/track3t.png',
+        songBackground: 'main/assets/images/track3.png',
+        songArtist: 'Midnight At 11',
+        songName: 'Lights'
     }
 ]; // object storing paths for audio objects
 
@@ -30,12 +44,10 @@ function playPause() {
         pPause.src = "main/assets/icons/pause.png"
         song.play();
         playing = false;
-        extPlaying = false;
     } else {
         pPause.src = "main/assets/icons/play.png"
         song.pause();
         playing = true;
-        extPlaying = true;
     }
 }
 // automatically play the next song at the end of the audio object's duration
