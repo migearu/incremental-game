@@ -51,3 +51,4 @@ None as of yet, although I will try to look through to find any.
 ## Update 4.1
 ### In-Game
 Added 2 more tracks.
+Fixed hardcoded background path.
