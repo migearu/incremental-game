@@ -47,4 +47,4 @@ Songs are paused by default as well.
 Credit for the song player goes to Hector Polanco.<br>
 Added assets folder.
 ## Bugs
-None as of yet, although I will try to look through to find any..
+None as of yet, although I will try to look through to find any.
