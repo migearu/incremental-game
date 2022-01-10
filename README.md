@@ -1,7 +1,7 @@
 # incremental-game (Chronostasis)
 Incremental game made in HTML, JavaScript, and CSS.<br>
 Hope you enjoy!<br><br>
-Link: https://codermanez.github.io/incremental-game/main.html<br><br>
+Link: https://migearu.github.io/incremental-game/main.html<br><br>
 # Credits where they're due
 [Hector Polanco](https://github.com/hecpolanco), [Simple-Music-Player](https://github.com/hecpolanco/Simple-Music-Player)
 # Things I don't know how to fix
