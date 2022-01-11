@@ -24,7 +24,7 @@ You should see a key named "chronostasis-save", copy the value from there.<br>
 Open it up in an [LZString Base64 compressor/decompressor](https://codepen.io/Holy-Fire/pen/VNRZme).<br>
 ![image](https://user-images.githubusercontent.com/75057913/148884336-e5508128-afa0-4092-8823-5cbfce54d23a.png)<br>
 Paste, then decode it, and copy into a text editor of your choice.<br>
-![image](https://user-images.githubusercontent.com/75057913/148885092-7da09d4a-5f56-4896-b33c-f7acbc0c735d.png)<>br
+![image](https://user-images.githubusercontent.com/75057913/148885092-7da09d4a-5f56-4896-b33c-f7acbc0c735d.png)<br>
 Edit the values based on [this](https://naruyoko.github.io/OmegaNum.js/docs.html#p.array).<br>
 e.g. {"array":\[10\],"sign":1} = 10, {"array":\[15, 1\],"sign":1} = 1e15, {"array":\[15, 1\],"sign":1} = 1e15, {"array":\[4, 6, 1\],"sign":1} = F4.00000F6<br>
 Paste back edited values, encode, then copy.<br>
