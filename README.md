@@ -9,6 +9,27 @@ Link: https://migearu.github.io/incremental-game/main.html<br><br>
 # Ideas and Calculations
 ## Some things to note
 The formula used for price calculation is ![image](https://user-images.githubusercontent.com/75057913/147889111-d0267914-cfa7-427c-ab93-78ba5e7d45ee.png), where b is the base cost, x is the price ratio, and y is the # of item bought (does not include items generated from higher tiers).
+# Cheating
+First of all, I do not care if people cheat, since there is no competition, unless you make one yourself.<br>
+To cheat, open the developer console. You should be greeted with this menu.<br>
+![image](https://user-images.githubusercontent.com/75057913/148883543-8dda1b42-e808-4f10-886f-334116270c9a.png)<br>
+Afterwards, click the two arrows going right at the top<br>
+![image](https://user-images.githubusercontent.com/75057913/148883626-99502f1e-babc-47ab-9e2f-b1e003518451.png)<br>
+From the selection, click the application tab.<br>
+![image](https://user-images.githubusercontent.com/75057913/148883856-e544fb0b-700c-432b-99fd-be841ecacb57.png)<br>
+Then on the sidebar, click "Local Storage", then "https://migearu.github.io".<br>
+![image](https://user-images.githubusercontent.com/75057913/148884066-4e12b358-a326-4a39-ab2a-50e9502641ab.png)<br>
+You should see a key named "chronostasis-save", copy the value from there.<br>
+![image](https://user-images.githubusercontent.com/75057913/148884166-3e57ddb5-13fe-476c-bf94-39118201ea0d.png)<br>
+Open it up in an [LZString Base64 compressor/decompressor](https://codepen.io/Holy-Fire/pen/VNRZme).<br>
+![image](https://user-images.githubusercontent.com/75057913/148884336-e5508128-afa0-4092-8823-5cbfce54d23a.png)<br>
+Paste, then decode it, and copy into a text editor of your choice.<br>
+![image](https://user-images.githubusercontent.com/75057913/148885092-7da09d4a-5f56-4896-b33c-f7acbc0c735d.png)<>br
+Edit the values based on [this](https://naruyoko.github.io/OmegaNum.js/docs.html#p.array).<br>
+e.g. {"array":\[10\],"sign":1} = 10, {"array":\[15, 1\],"sign":1} = 1e15, {"array":\[15, 1\],"sign":1} = 1e15, {"array":\[4, 6, 1\],"sign":1} = F4.00000F6<br>
+Paste back edited values, encode, then copy.<br>
+Paste re-encoded string into the "chronostasis-save" key, and press load game before it autosaves.<br>
+The game should reflect these changes afterwards.
 # Update 1
 For the current moment, to save and load, call WriteToStorage(gameData, "chronostasis-save"), and ReadFromStorage("chronostasis-save").<br>
 Why? Because I am too lazy to fix that right now, however it will be fixed in the next update.
