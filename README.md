@@ -1,5 +1,6 @@
 # incremental-game (Chronostasis)
 Incremental game made in HTML, JavaScript, and CSS.<br>
+2022-01-13: Updates will be in lesser quantity, but more content in each update.
 Hope you enjoy!<br><br>
 Link: https://migearu.github.io/incremental-game/main.html<br><br>
 # Credits where they're due
