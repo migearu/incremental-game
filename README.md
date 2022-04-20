@@ -1,6 +1,7 @@
 # incremental-game (Chronostasis)
 Incremental game made in HTML, JavaScript, and CSS.<br>
 2022-01-13: Updates will be in lesser quantity, but more content in each update.
+2022-04-20: I am working on a different game, which uses Vue instead of React. This however, will remain up, and the content from this game will be ported into the new game. I am not great at finishing projects, but this for sure, I will finish. In addition to this, I will produce full tracks for music, instead of just loops, etc.
 Hope you enjoy!<br><br>
 Link: https://migearu.github.io/incremental-game/main.html<br><br>
 # Credits where they're due
